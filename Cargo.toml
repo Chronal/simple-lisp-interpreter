@@ -1,10 +1,15 @@
 [package]
-name = "simple-lisp-interpreter"
+name = "lispcalc"
 version = "0.1.0"
 authors = ["Anuj Dhavalikar <chronal@chronal.space>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[dependencies]
-regex = "*"
+[lib]
+name = "compiler"
+path = "src/lib.rs"
+
+[[bin]]
+name = "repl"
+path = "src/main.rs"
